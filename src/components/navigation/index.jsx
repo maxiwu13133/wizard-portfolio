@@ -1,5 +1,5 @@
 "use client";
-import { BtnList } from "@/app/(Data)/personalData";
+import { BtnList } from "@/app/(data)/personalData";
 import NavButton from "./NavButton";
 
 const Navigation = () => {
@@ -14,7 +14,7 @@ const Navigation = () => {
           const x = `calc(${radius} * ${Math.cos(angleRad)})`;
           const y = `calc(${radius} * ${Math.sin(angleRad)})`;
 
-          return <NavButton key={i} x={x} y={y} {...btn} />
+          return <NavButton key={i} x={x} y={y} {...btn} />;
         })}
       </div>
     </div>
