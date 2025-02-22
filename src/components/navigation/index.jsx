@@ -1,5 +1,5 @@
 "use client";
-import { BtnList } from "@/app/data";
+import { BtnList } from "@/app/(Data)/personalData";
 import NavButton from "./NavButton";
 
 const Navigation = () => {

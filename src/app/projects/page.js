@@ -1,23 +1,24 @@
+import ProjectList from "@/components/projects";
 import Image from "next/image";
+import { projectsData } from "../(Data)/projectsData";
 import RenderModel from "@/components/RenderModel";
-import Wizard from "@/components/models/Wizard";
-import Navigation from "@/components/navigation";
+import Staff from "@/components/models/Staff";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative">
       <Image
-        src={"/background/home-background.png"}
+        src={"/background/projects-background.png"}
         alt="background-image"
         fill
         className="w-full h-full object-cover object-center opacity-50 -z-50"
       />
 
-      <div className="w-full h-screen">
-        {/* navigation and 3d model */}
-        <Navigation />
+      <ProjectList projects={projectsData} />
+
+      <div className="flex items-center justify-center fixed top-20 left-0 h-screen">
         <RenderModel>
-          <Wizard />
+          <Staff />
         </RenderModel>
       </div>
     </main>

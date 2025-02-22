@@ -42,7 +42,7 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
       }}
     >
       <Link
-        className="text-foreground rounded-full flex items-center justify-center bg-background/20 border border-accent/30 border-solid backdrop-blue-[6px] shadow-glass-inset hover:shadow-glass-sm"
+        className="text-foreground rounded-full flex items-center justify-center custom-bg"
         aria-label={label}
         href={link}
         target={newTab ? "_blank" : "_self"}
