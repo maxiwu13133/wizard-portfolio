@@ -11,7 +11,7 @@ export default function Home() {
         src={bg}
         alt="background-image"
         fill
-        className="w-full h-full object-cover object-center opacity-50 -z-50"
+        className="w-full h-full object-cover object-center opacity-0 -z-50"
       />
 
       <div className="w-full h-screen">

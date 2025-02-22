@@ -14,10 +14,13 @@ const FirefliesBackground = () => {
   useEffect(() => {
     const addFireflyPeriodically = () => {
       const newFirefly = createFirefly();
-      setFireflies([newFirefly]);
+      setFireflies((currentFireflies) => [
+        ...currentFireflies.slice(-14),
+        newFirefly,
+      ]);
     };
 
-    const interval = setInterval(addFireflyPeriodically, 10000);
+    const interval = setInterval(addFireflyPeriodically, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -28,11 +31,11 @@ const FirefliesBackground = () => {
         return (
           <div
             key={firefly.id}
-            className="absolute rounded-full bg-accent w-[20px] h-[20px]"
+            className="absolute rounded-full w-[10px] h-[10px] bg-firefly-radial animate-firefly"
             style={{
               top: firefly.top,
               left: firefly.left,
-              animation: `move ${firefly.animationDuration} infinite alternate`
+              animation: `move ${firefly.animationDuration} infinite alternate, firefly ${firefly.animationDuration} infinite ease-in-out alternate`,
             }}
           ></div>
         );
