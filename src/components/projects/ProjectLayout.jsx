@@ -1,8 +1,19 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
+
+const item = {
+  hidden: { opacity: 0, y: 100 },
+  show: { opacity: 1, y: 0 },
+};
+
+const NavLink = motion(Link);
 
 const ProjectLayout = ({ name, description, date, demoLink }) => {
   return (
-    <Link
+    <NavLink
+      variants={item}
       href={demoLink}
       target={"_blank"}
       className="text-sm md:text-base cursor-pointer flex items-center justify-between w-full relative rounded-lg overflow-hidden p-4 md:p-6 custom-bg"
@@ -14,8 +25,10 @@ const ProjectLayout = ({ name, description, date, demoLink }) => {
 
       <div className="self-end flex-1 mx-2 mb-1 bg-transparent border-b border-dashed border-muted" />
 
-      <p className="text-muted sm:text-foreground">{new Date(date).toDateString()}</p>
-    </Link>
+      <p className="text-muted sm:text-foreground">
+        {new Date(date).toDateString()}
+      </p>
+    </NavLink>
   );
 };
 
