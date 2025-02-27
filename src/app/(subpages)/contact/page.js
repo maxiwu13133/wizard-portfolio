@@ -6,6 +6,8 @@ export default function Contact() {
   return (
     <>
       <Image
+        priority
+        sizes="100vw"
         src={bg}
         alt="background-image"
         className="fixed w-full h-full top-0 left-0 object-cover object-center opacity-50 -z-50"

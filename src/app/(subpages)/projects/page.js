@@ -2,13 +2,19 @@ import ProjectList from "@/components/projects";
 import Image from "next/image";
 import { projectsData } from "../../(data)/projectsData";
 import RenderModel from "@/components/RenderModel";
-import Staff from "@/components/models/Staff";
 import bg from "../../../../public/background/projects-background.png";
+import dynamic from "next/dynamic";
+
+const Staff = dynamic(() => import("@/components/models/Staff"), {
+  ssr: !!false,
+});
 
 export default function Home() {
   return (
     <div>
       <Image
+        priority
+        sizes="100vw"
         src={bg}
         alt="background-image"
         className="fixed w-full h-full top-0 left-0 object-cover object-center opacity-50 -z-50"
