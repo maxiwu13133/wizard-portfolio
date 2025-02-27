@@ -11,12 +11,12 @@ export default function Contact() {
         className="fixed w-full h-full top-0 left-0 object-cover object-center opacity-50 -z-50"
       />
 
-      <article className="relative w-full flex flex-col items-center justify-center gap-y-8">
-        <div className="flex flex-col items-center justify-center gap-y-6 w-3/4">
+      <article className="relative w-full flex flex-col items-center justify-center py-8 sm:py-0 gap-y-8">
+        <div className="flex flex-col items-center justify-center gap-y-6 w-full sm:w-3/4">
           <h1 className="text-accent font-semibold text-center text-4xl">
             Summon the Wizard
           </h1>
-          <p className="text-center font-light">
+          <p className="text-center font-light text-sm xs:text-base">
             Step into the circle of enchantment and weave your words into the
             fabric of the cosmos. Whether you seek to conjure collaborations,
             unlock mysteries, or simply share tales of adventure, your messages

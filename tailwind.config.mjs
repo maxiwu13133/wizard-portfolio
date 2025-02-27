@@ -38,7 +38,10 @@ export default {
       animation: {
         "spin-slow": "spin 40s linear infinite",
         "spin-slow-reverse": "spin-reverse 40s linear infinite",
-        firefly: "firefly 3s infinite ease-in-out alternate"
+        firefly: "firefly 3s infinite ease-in-out alternate",
+      },
+      screens: {
+        xs: "480px",
       },
     },
   },
