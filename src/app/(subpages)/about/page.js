@@ -6,7 +6,7 @@ import AboutDetails from "@/components/about";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Image
         src={bg}
         alt="background-image"
@@ -27,6 +27,6 @@ export default function Home() {
       </div>
 
       <AboutDetails />
-    </>
+    </div>
   );
 }

@@ -7,7 +7,7 @@ import bg from "../../../../public/background/projects-background.png";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Image
         src={bg}
         alt="background-image"
@@ -21,6 +21,6 @@ export default function Home() {
           <Staff />
         </RenderModel>
       </div>
-    </>
+    </div>
   );
 }

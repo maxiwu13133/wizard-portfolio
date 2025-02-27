@@ -1,4 +1,5 @@
 "use client";
+
 import { BtnList } from "@/app/(data)/personalData";
 import NavButton from "./NavButton";
 import useScreenSize from "../hooks/useScreenSize";
